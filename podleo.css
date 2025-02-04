@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Permite que o header tenha uma estrutura vertical */
+    background-color: #000000; 
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adiciona espaço entre os itens */
+    padding: 10px; 
+}
+
+.logo {
+    width: 100px;
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: auto; 
+}
+
+.titulo-container {
+    margin-left: 3em; /* Espaço entre a imagem e o texto */
+    flex-grow: 1; /* Permite que o container do título ocupe o espaço disponível */
+}
+
+.titulo {
+    font-size: 23px;
+    color: #ffc400; /* Mudando a cor para branco para melhor contraste */
+    font-family: 'Sans Serif', sans-serif;
+    margin: 0; /* Remove margens padrão */
+}
+
+.subtitulo {
+    font-size: 18px; /* Tamanho da fonte do subtítulo */
+    color: #ffc400; /* Mudando a cor para branco para melhor contraste */
+    font-family: 'Sans Serif', sans-serif;
+    margin: 0; /* Remove margens padrão */
+    margin-top: 2%;
+}
+
+.login-button {
+    background-color: transparent; /* Torna o fundo do botão transparente */
+    border: none; /* Remove a borda do botão */
+    border-radius: 50%; /* Faz o botão ser circular */
+    width: 50px; /* Largura fixa do botão */
+    height: 50px; /* Altura fixa do botão */
+    display: flex; /* Usar flexbox para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-right: 8%; /* Margem à direita do botão */
+    transition: all 0.3s ease; /* Transição suave para o efeito */
+}
+
+.login-button:hover {
+    box-shadow: 0 0 10px #ffc400, 0 0 15px #ffc400, 0 0 20px #ffc400; /* Efeito neon */
+}
+
+.login-icon {
+    width: 35px; /* Tamanho do ícone */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.header-bottom {
+    display: flex; /* Usar flexbox para centralizar os sumários */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: #000000; /* Cor de fundo para a parte inferior */
+    padding: 10px 0; /* Espaçamento vertical */
+}
+
+.nav-sumarios {
+    display: flex; /* Usar flexbox para os links */
+    gap: 20px; /* Espaço entre os links */
+}
+
+.nav-sumarios a {
+    color: rgb(255, 255, 255); /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-family: 'Sans Serif', sans-serif; /* Fonte dos links */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+.nav-sumarios a:hover {
+    color: #fffb00; /* Cor do texto ao passar o mouse */
+}
+
+.dropdown {
+    position: relative; /* Necessário para posicionar o conteúdo do dropdown */
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+.dropdown-content {
+    display: none; /* Esconde o conteúdo do dropdown por padrão */
+    position: absolute; /* Posiciona o conteúdo em relação ao item pai */
+    background-color: #f9f9f9; /* Cor de fundo do dropdown */
+    min-width: 160px; /* Largura mínima do dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra para o dropdown */
+    z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Exibe o conteúdo do dropdown ao passar o mouse */
+}
+
+.dropdown-content a {
+    color: black; /* Cor do texto dos links do dropdown */
+    padding: 12px 16px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    display: block; /* Faz com que os links ocupem toda a largura do dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse sobre os links do dropdown */
+}
+
+.logo-podLEO:hover {
+    box-shadow: 0 0 20px #fea101, 0 0 25px #fea101, 0 0 30px #fea101;
+}
+
+.podleo-container {
+    display: flex; /* Usar flexbox para alinhar a imagem e o texto */
+    align-items: center; /* Alinha verticalmente os itens */
+    margin: 20px auto; /* Margem superior e inferior */
+    margin-bottom: 5%;
+    max-width: 800px; /* Largura máxima da seção */
+    background-image: image('img/background001.png'); /* Imagem de fundo */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    position: relative; /* Necessário para o posicionamento do texto e logo */
+}
+
+.logo-podLEO {
+    width: 300px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    transition: all 0.3s ease;
+}
+
+.podleo-text {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+    color: #ffffff; /* Cor do texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 560px; /* Largura máxima do vídeo */
+    max-height: 315px;
+    margin: 3% auto; /* Margem superior e inferior de 3% e centraliza horizontalmente */
+  }
+  
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }

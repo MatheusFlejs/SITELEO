@@ -1,7 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-}
+
 
 header {
     display: flex;
@@ -118,4 +115,12 @@ header {
 
 .dropdown-content a:hover {
     background-color: #ddd; /* Cor de fundo ao passar o mouse sobre os links do dropdown */
+}
+
+#foto_banner {
+    width: 750px; /* Corrigido para um único valor */
+    display: flex; /* Corrigido para 'flex' */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    margin: 2% auto; /* Margem superior de 2% e centraliza horizontalmente */
 }
