@@ -51,7 +51,7 @@ header {
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
-    margin-right: 8%; /* Margem à direita do botão */
+    margin-right: 10%; /* Margem à direita do botão */
     transition: all 0.3s ease; /* Transição suave para o efeito */
 }
 
